@@ -10,7 +10,7 @@ RUN echo "deb http://qgis.org/debian-ltr stretch main" >> /etc/apt/sources.list
 RUN gpg --keyserver keyserver.ubuntu.com --recv CAEB3DC3BDF7FB45
 RUN gpg --export --armor CAEB3DC3BDF7FB45 | apt-key add -
 RUN apt update && \
-    apt install -y qgis python-pip saga qgis-server python-qgis qgis-provider-grass \
+    apt install -y qgis qgis-plugin-globe qgis-plugin-grass python-pip saga qgis-server python-qgis qgis-provider-grass \
     locales locales-all && \
     rm -rf /var/lib/apt/lists/* && \
     pip install tailer &&\ 
